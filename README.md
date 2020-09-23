@@ -19,11 +19,3 @@ This application solves the issue of not being able to use a notepad without ope
 The target audience for this app is anyone that understands how to use the command line. If you can use the command line, then you can use ToDoList CLI. This target user will be going about their day-to-day tasks when they suddenly think or something they need to remember later. `CTRL + ALT + T` and write it down, ToDoList CLI is coming to your town.
 
 ## ToDoList CLI Features
-
-git checkout -b "name a branch working on"
-git branch
-git add
-git commit
-git checkout master
-git merge "branch you were just on"
-git push origin master
