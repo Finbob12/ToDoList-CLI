@@ -1,6 +1,19 @@
 # ToDoList CLI
 
-## This project is hosted on Github, link below
+## Table of contents
+
+[1. Links](#Links)  
+[2. What does ToDoList CLI do?](#What-does-ToDoList-CLI-do?)  
+[3. What problem does this app solve? and why am I developing it?](#What-problem-does-this-app-solve?-Why-am-I-developing-it?)  
+[4. Target audience and how they will use it](#Target-audience-and-how-they-will-use-it)  
+[5. ToDoList CLI Features](#ToDoList-CLI-Features)  
+[6. An outline of user interaction](#An-outline-of-user-interaction)  
+[7. Control flow diagram for the app](#Control-flow-diagram-for-the-app)  
+[8. Implementation plan - Trello](#Implementation-plan---Trello)  
+[9. System requirements](#System-requirements)  
+[10. How to install and run ToDoList CLI](#How-to-install-and-run-ToDoList-CLI)  
+
+## This project is hosted on Github, links below
 
 [Github: ToDoList CLI](https://github.com/Finbob12/ToDoList-CLI)
 
@@ -10,7 +23,7 @@
 
 The ToDoList CLI is a command line interface application that works as a to do list. This application turns your command line into an easy to use notepad, that conveniently stores notes for later use. These notes can be created, read, updated and deleted at the user's ease of command. When the application is launched a simple menu appears asking the user what actions they would like to take. This menu will change depending on how the user interacts with it and continue to give helpful instrucitons to guide the user through using the application. The user will also be informed that they can type `-h` or `help` at any time to receive further instructions if they are confused. The user will also be told how to exit the application by typing `q` or `quit` at any time.
 
-### What problem does this app solve? and why am I developing it?
+### What problem does this app solve? Why am I developing it?
 
 This application solves the issue of not being able to use a notepad without opening a large, detailed, bloated application. Most notepad applications will be overly convoluted, rather than simple and elegant like ToDoList CLI. Most notepad applications require you to find the app in your ever growing list of unused apps, boot it up, wait for it to open, and navigate a clunky GUI just to write down that you need some milk. I'm developing ToDoList CLI so you can `CTRL + ALT + T` and type "I NEED MILK" before your friend using "Super Notes App 3k" can even find their app.
 
@@ -29,7 +42,7 @@ Delete - Specify which note you would like to delete and it will be removed from
 
 ## An outline of user interaction - do this later with screenshots
 
-## Control flow of app - do this later
+## Control flow diagram for the app - do this later
 
 ## Implementation plan - Trello
 
@@ -37,4 +50,6 @@ The below two images are from my initial Trello plan. I've set myself acceptable
 
 ![24-sep-Trello](./readme_images/24-sep-trello.png) ![24-sep-checklist](./readme_images/24-sep-checklist.png)
 
-## How to install and use ToDoList CLI - do this at the end
+## System requirements
+
+## How to install and run ToDoList CLI - do this at the end
