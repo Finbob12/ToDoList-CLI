@@ -1,4 +1,4 @@
-class NoteItem
+class NotepadNote
     attr_reader :heading, :contents
     def initialize(heading, contents)
         @heading = heading
