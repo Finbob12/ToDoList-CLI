@@ -18,4 +18,19 @@ This application solves the issue of not being able to use a notepad without ope
 
 The target audience for this app is anyone that understands how to use the command line. If you can use the command line, then you can use ToDoList CLI. This target user will be going about their day-to-day tasks when they suddenly think or something they need to remember later. `CTRL + ALT + T` and write it down, ToDoList CLI is coming to your town.
 
-## ToDoList CLI Features
+## ToDoList CLI Features - expand on this later
+
+ToDoList CLI has all the featured necessary for a premier notes application.
+The interactive menu - A self explanatory menu in your terminal guiding your navigation with simple text inputs from the user.
+Create - The most important feature of the app, the ability to create your own notes and have the app save them.
+Read - Easy accessibility to read notes you have previously saved.
+Update - Ability to update or edit notes that have been previously created.
+Delete - Specify which note you would like to delete and it will be removed from the app.
+
+## An outline of user interaction - do this later with screenshots
+
+## Control flow of app - do this later
+
+## Implementation plan - Trello
+
+## How to install and use ToDoList CLI - do this at the end
