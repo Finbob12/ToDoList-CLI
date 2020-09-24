@@ -2,7 +2,7 @@
 
 ## This project is hosted on Github, link below
 
-[Github: Fin George](https://github.com/Finbob12/ToDoList-CLI)
+[Github: ToDoList CLI](https://github.com/Finbob12/ToDoList-CLI)
 
 ## Purpose and scope of the application
 
@@ -32,5 +32,9 @@ Delete - Specify which note you would like to delete and it will be removed from
 ## Control flow of app - do this later
 
 ## Implementation plan - Trello
+
+The below two images are from my initial Trello plan. I've set myself acceptable timeframes to complete each task, allowing for extra days before the project is due for any complications or extra features I may want to add.
+
+![24-sep-Trello](./readme_images/24-sep-trello.png) ![24-sep-checklist](./readme_images/24-sep-checklist.png)
 
 ## How to install and use ToDoList CLI - do this at the end
