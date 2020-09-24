@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-[1. Links](#Links)  
+[1. Links](#links)  
 [2. What does ToDoList CLI do?](#What-does-ToDoList-CLI-do?)  
 [3. What problem does this app solve? and why am I developing it?](#What-problem-does-this-app-solve?-Why-am-I-developing-it?)  
 [4. Target audience and how they will use it](#Target-audience-and-how-they-will-use-it)  
