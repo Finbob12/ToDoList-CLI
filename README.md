@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-[1. Links](#links)  
+[1. Project Links](#Project-Links)  
 [2. What does ToDoList CLI do?](#What-does-ToDoList-CLI-do?)  
 [3. What problem does this app solve? and why am I developing it?](#What-problem-does-this-app-solve?-Why-am-I-developing-it?)  
 [4. Target audience and how they will use it](#Target-audience-and-how-they-will-use-it)  
@@ -13,7 +13,7 @@
 [9. System requirements](#System-requirements)  
 [10. How to install and run ToDoList CLI](#How-to-install-and-run-ToDoList-CLI)  
 
-## This project is hosted on Github, links below
+## Project Links
 
 [Github: ToDoList CLI](https://github.com/Finbob12/ToDoList-CLI)
 
@@ -31,7 +31,7 @@ This application solves the issue of not being able to use a notepad without ope
 
 The target audience for this app is anyone that understands how to use the command line. If you can use the command line, then you can use ToDoList CLI. This target user will be going about their day-to-day tasks when they suddenly think or something they need to remember later. `CTRL + ALT + T` and write it down, ToDoList CLI is coming to your town.
 
-## ToDoList CLI Features - expand on this later
+## ToDoList CLI Features
 
 ToDoList CLI has all the featured necessary for a premier notes application.
 The interactive menu - A self explanatory menu in your terminal guiding your navigation with simple text inputs from the user.
@@ -40,9 +40,9 @@ Read - Easy accessibility to read notes you have previously saved.
 Update - Ability to update or edit notes that have been previously created.
 Delete - Specify which note you would like to delete and it will be removed from the app.
 
-## An outline of user interaction - do this later with screenshots
+## An outline of user interaction
 
-## Control flow diagram for the app - do this later
+## Control flow diagram for the app
 
 ## Implementation plan - Trello
 
@@ -52,4 +52,4 @@ The below two images are from my initial Trello plan. I've set myself acceptable
 
 ## System requirements
 
-## How to install and run ToDoList CLI - do this at the end
+## How to install and run ToDoList CLI
