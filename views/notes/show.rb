@@ -3,7 +3,7 @@ module Views
       def self.show(note:)
         return puts 'Note not found' unless note
   
-        headers = %w[Attribute Value]
+        headers = %w[ToDoList CLI]
         attrs = attribute_rows_for note
         table = TTY::Table.new headers, attrs
   

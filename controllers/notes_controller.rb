@@ -2,7 +2,7 @@ require_relative '../models/note'
 require_relative '../views/notes/index'
 require_relative '../views/notes/show'
 require_relative '../views/notes/new'
-require_relative '../views/notes/edit'
+require_relative '../views/notes/update'
 
 module NotesController
   def self.index
@@ -24,7 +24,7 @@ module NotesController
     puts e
   end
 
-  def self.edit(id)
+  def self.update(id)
     note = Note.find(id)
     ::Views::Notes.new note: note
   rescue => e

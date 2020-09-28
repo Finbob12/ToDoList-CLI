@@ -1,9 +1,9 @@
 require_relative 'dispatch'
+require "tty-prompt"
 
 begin
-    print 'Choose an option (new, list, show , edit, delete, quit): '
-    puts 'Please specify an ID # if using show, edit or delete'
-    input = gets.chomp.downcase.strip.split(' ')
+    prompt = TTY::Prompt.new
+    input = prompt.select("Please select on option", %w(New Update List Show Delete))
     command, params = input
     dispatch command, params
-end until ['quit', 'q'].include? command
+end until ['quit', 'q', 'exit', ':q'].include? command

@@ -8,8 +8,8 @@ def dispatch(cmd, params = nil)
     ::NotesController.show params
   when 'new'
     ::NotesController.new
-  when 'edit'
-    ::NotesController.edit params
+  when 'update'
+    ::NotesController.update params
   when 'delete'
     ::NotesController.destroy params
   end

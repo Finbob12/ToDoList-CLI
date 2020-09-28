@@ -2,8 +2,8 @@ require_relative 'form'
 
 module Views
   module Notes
-    def self.edit(note:)
-      puts "Edit #{note.id}"
+    def self.update(note:)
+      puts "Update #{note.id}"
       form note
     end
   end
