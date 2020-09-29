@@ -9,9 +9,10 @@ module Views
       headers = %w[Id Heading Contents]
       rows = table_rows_for notes
       table = TTY::Table.new headers, rows
-
-      puts 'Notes!'
-      puts table.render :ascii
+      puts
+      puts
+      puts 'Below are all currently saved notes. If you wish to update or delete any, please use the ID #'
+      puts table.render :unicode
     end
 
     def self.table_rows_for(notes)

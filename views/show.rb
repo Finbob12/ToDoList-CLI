@@ -3,12 +3,13 @@ module Views
       def self.show(note:)
         return puts 'Note not found' unless note
   
-        headings = %w[ToDoList CLI]
         contents = attribute_rows_for note
-        table = TTY::Table.new headings, contents
-  
-        puts "Note #{note.id}"
-        puts table.render :unicode
+        table = TTY::Table.new contents
+        
+        puts
+        puts
+        puts "If you wish to 'update' or 'delete' this note please use this ID # '#{note.id}'"
+        puts table.render(:unicode, alignments: [:center, :left])
       end
   
       def self.attribute_rows_for(note)
