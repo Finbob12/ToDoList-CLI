@@ -50,6 +50,10 @@ The below two images are from my initial Trello plan. I've set myself acceptable
 
 ![24-sep-Trello](./readme_images/24-sep-trello.png) ![24-sep-checklist](./readme_images/24-sep-checklist.png)
 
+Below update from 29th September, five days after the initial board implementation. In this time I had deleted all of my code twice. On my third run through everything was working the way I wanted and my Trello board was starting to show some promise in my application.
+
+![29-sep-Trello](./readme_images/29-sep-trello.png) ![29-sep-checklist](./readme_images/29-sep-checklist.png)
+
 ## System requirements
 
 ## How to install and run ToDoList CLI

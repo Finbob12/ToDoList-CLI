@@ -27,15 +27,13 @@ class Todo
     end
   
     def delete
+      return if @id.nil? #guard for trying to delete nonexistent id
       idx = TODOS.index { |todo| todo.id == @id }
       @id = TODOS[idx] = nil
     end
   
     def to_s
-      [
-        super,
-        "Id:#{@id} Heading:#{@heading} Contents:#{@contents}"
-      ].join("\n")
+
     end
   
     def self.all
@@ -45,7 +43,7 @@ class Todo
     def self.find(id)
       id = id.to_i
       todo = TODOS.find { |a| a.id == id }
-      raise 'RecordNotFound' unless todo
+      raise "Invalid ID #{id}" unless todo
       todo
     end
   end
