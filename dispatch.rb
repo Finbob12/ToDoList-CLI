@@ -11,6 +11,6 @@ def dispatch(cmd, params = nil)
   when 'update'
     ::NotesController.update params
   when 'delete'
-    ::NotesController.destroy params
+    ::NotesController.delete params
   end
 end

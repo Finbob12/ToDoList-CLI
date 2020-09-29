@@ -10,11 +10,6 @@ module NotesController
     Views::Notes.index notes: note
   end
 
-  def self.show(id)
-    note = Note.find(id) rescue nil
-    Views::Notes.show note: note
-  end
-
   def self.new
     note = Note.new
     Views::Notes.new note: note
@@ -32,9 +27,14 @@ module NotesController
     puts e
   end
 
-  def self.destroy(id)
+  def self.delete(id)
     note = Note.find(id) rescue nil
     return unless note
     note.delete
+  end
+
+  def self.show(id)
+    note = Note.find(id) rescue nil
+    Views::Notes.show note: note
   end
 end
