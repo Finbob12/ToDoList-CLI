@@ -16,6 +16,6 @@ puts '
 begin
     prompt = TTY::Prompt.new
     input = prompt.select("What would you like to do?", %w(New List Show Update Delete Quit))
-    command, params = input.downcase
-    dispatch command, params
+    command, id = input.downcase
+    dispatch command, id
 end until ['quit', 'q', 'exit', ':q'].include? command
