@@ -24,7 +24,6 @@ class Note
       raise 'Note not saved' unless valid?
       @id = TODOS.length + 1
       TODOS << self
-      File.open('note.yml', 'w') { |file| file.write(TODOS.to_yaml) }
     end
 
     def self.help
@@ -56,7 +55,6 @@ class Note
     end
   
     def to_s
-
     end
   
     def self.all

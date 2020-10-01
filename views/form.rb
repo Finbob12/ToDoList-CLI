@@ -2,16 +2,12 @@ module Views
     module Notes
       def self.form(note)
         begin
-          print 'Heading: '
-          print " (#{note.heading})" unless note.heading.nil?
-          print ': '
-          input = gets.chomp.strip
+          prompt = TTY::Prompt.new
+          input = prompt.ask('Heading: ')
           note.heading = !input.empty? ? input : note.heading
   
-          print 'Contents: '
-          print " (#{note.contents})" unless note.contents.nil?
-          print ': '
-          input = gets.chomp.strip
+          prompt = TTY::Prompt.new
+          input = prompt.ask('Contents: ')
           note.contents = !input.empty? ? input : note.contents
   
           puts note.errors.values unless note.valid?
@@ -19,4 +15,3 @@ module Views
       end
     end
   end
-  

@@ -1,7 +1,7 @@
 module Views
     module Notes
       def self.show(note:)
-        return puts 'Note not found' unless note
+        raise 'Note not found' unless note
   
         contents = attribute_rows_for note
         table = TTY::Table.new contents
