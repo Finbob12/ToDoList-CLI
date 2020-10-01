@@ -1,4 +1,3 @@
-require 'yaml'
 
 class Note
     TODOS = []
@@ -22,7 +21,7 @@ class Note
     end
   
     def save!
-      raise 'RecordNotSaved' unless valid?
+      raise 'Note not saved' unless valid?
       @id = TODOS.length + 1
       TODOS << self
       File.open('note.yml', 'w') { |file| file.write(TODOS.to_yaml) }
@@ -74,9 +73,5 @@ class Note
     def self.fetch_id
       puts 'Please enter the ID #: '
       gets.chomp.to_i
-    end
-
-    def self.init
-      TODOS.push *YAML.load(File.read('note.yml'))
     end
 end
