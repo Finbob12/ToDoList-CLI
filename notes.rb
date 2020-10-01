@@ -1,7 +1,9 @@
 require_relative 'dispatch'
+require_relative 'models/note.rb'
 require 'tty-prompt'
 require 'colorize'
 
+Note.init
 
 puts '
 

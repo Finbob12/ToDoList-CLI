@@ -1,3 +1,4 @@
+require 'yaml'
 
 class Note
     TODOS = [] #should change this to a class instance variable
@@ -24,6 +25,7 @@ class Note
       raise 'RecordNotSaved' unless valid?
       @id = TODOS.length + 1
       TODOS << self
+      File.open('note.yml', 'w') { |file| file.write(TODOS.to_yaml) }
     end
 
     def self.help
@@ -72,5 +74,9 @@ class Note
     def self.fetch_id
       puts 'Please enter the ID #: '
       gets.chomp.to_i
+    end
+
+    def self.init
+      TODOS.push *YAML.load(File.read('note.yml'))
     end
 end
