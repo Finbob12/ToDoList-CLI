@@ -21,9 +21,30 @@ class Todo
   
     def save!
       raise 'RecordNotSaved' unless valid?
-  
       @id = TODOS.length + 1
       TODOS << self
+    end
+
+    def self.help
+      puts
+      puts
+      puts 'Please use your arrow keys to select what option you would like to do in ToDoList CLI'.colorize(:blue)
+      print 'New: '.colorize(:magenta) 
+      puts 'Creates a new note'
+      print 'List: '.colorize(:magenta) 
+      puts 'Shows all notes that have been created'
+      print 'Show: '.colorize(:magenta) 
+      puts 'Requests a note ID and shows that note'
+      print 'Update: '.colorize(:magenta) 
+      puts 'Requests a note ID and allows for editing of that note'
+      print 'Delete: '.colorize(:magenta) 
+      puts 'Requests a note ID and allows deleting of that note'
+      print 'Quit: '.colorize(:magenta) 
+      puts 'Exits the application'
+      print 'Help: '.colorize(:magenta) 
+      puts 'Opens the current dialogue'
+      puts
+      puts
     end
   
     def delete
@@ -45,6 +66,11 @@ class Todo
       todo = TODOS.find { |a| a.id == id }
       raise "Invalid ID #{id}" unless todo
       todo
+    end
+
+    def self.fetch_id
+      puts 'Please enter the ID #: '
+      gets.chomp.to_i
     end
   end
   

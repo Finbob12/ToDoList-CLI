@@ -1,16 +1,18 @@
 require_relative 'controllers/notes_controller.rb'
 
-def dispatch(cmd, id = nil)
-  case cmd
+def dispatch(selection)
+  case selection
   when 'new'
     ::NotesController.new
   when 'list'
     ::NotesController.index
   when 'show'
-    ::NotesController.show(id)
+    ::NotesController.show
   when 'update'
-    ::NotesController.update(id)
+    ::NotesController.update
+  when 'help'
+    ::NotesController.help
   when 'delete'
-    ::NotesController.delete(id)
+    ::NotesController.delete
   end
 end

@@ -15,7 +15,7 @@ puts '
                                                                  '.colorize(:magenta)
 begin
     prompt = TTY::Prompt.new
-    input = prompt.select("What would you like to do?", %w(New List Show Update Delete Quit))
-    command, id = input.downcase
-    dispatch command, id
-end until ['quit', 'q', 'exit', ':q'].include? command
+    input = prompt.select("What would you like to do?", %w(New List Show Update Delete Help Quit))
+    selection = input.downcase
+    dispatch selection
+end until ['quit', 'q', 'exit', ':q'].include? selection

@@ -14,26 +14,38 @@ module NotesController
     note = Note.new
     Views::Notes.new note: note
     note.save!
-    show note.id
+    display note.id
   rescue => e
     puts e
   end
 
-  def self.update(id)
-    note = Note.find(id)
+  def self.update
+    requested_id = Note.fetch_id
+    note = Note.find(requested_id)
     Views::Notes.new note: note
     show note.id
   rescue => e
     puts e
   end
 
-  def self.delete(id)
-    note = Note.find(id) rescue nil
+  def self.help
+    Note.help
+  end
+
+  def self.delete
+    requested_id = Note.fetch_id
+    note = Note.find(requested_id) rescue nil
     return unless note
     note.delete
   end
 
-  def self.show(id)
+  def self.show
+    requested_id = Note.fetch_id
+    note = Note.find(requested_id) rescue nil
+    Views::Notes.show note: note
+  end
+
+  def self.display(id) #this is just for new to use show without requesting ID.
     note = Note.find(id) rescue nil
     Views::Notes.show note: note
   end
