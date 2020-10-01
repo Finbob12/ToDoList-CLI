@@ -23,7 +23,7 @@ module NotesController
     requested_id = Note.fetch_id
     note = Note.find(requested_id)
     Views::Notes.new note: note
-    show note.id
+    display note.id
   rescue => e
     puts e
   end
@@ -45,7 +45,7 @@ module NotesController
     Views::Notes.show note: note
   end
 
-  def self.display(id) #this is just for new to use show without requesting ID.
+  def self.display(id) #this is just for new & update to use show without requesting ID.
     note = Note.find(id) rescue nil
     Views::Notes.show note: note
   end
