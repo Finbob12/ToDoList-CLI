@@ -1,6 +1,11 @@
 ---
 - !ruby/object:Note
   id: 1
-  heading: Groceries
-  contents: Milk, Rice, Eggs, Cat food
+  heading: 
+  contents: 
+  errors: {}
+- !ruby/object:Note
+  id: 2
+  heading: 
+  contents: 
   errors: {}

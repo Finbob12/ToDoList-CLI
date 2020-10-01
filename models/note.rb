@@ -1,7 +1,7 @@
 require 'yaml'
 
 class Note
-    TODOS = [] #should change this to a class instance variable
+    TODOS = []
   
     attr_reader :id, :errors, :contents
     attr_accessor :heading
