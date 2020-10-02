@@ -4,14 +4,14 @@ module Views
         begin
           prompt = TTY::Prompt.new
           input = prompt.ask('Heading: ') do |q|
-            q.validate { |input| input =~ /^(\w+\S+)$/ }
+            q.validate { |input| input =~ /[a-zA-Z0-9]/ }
             q.messages[:valid?] = "Please enter some text"
           end
           note.heading = !input.empty? ? input : note.heading
   
           prompt = TTY::Prompt.new
           input = prompt.ask('Contents: ') do |q|
-          q.validate { |input| input =~ /^(\w+\S+)$/ }
+          q.validate { |input| input =~ /[a-zA-Z0-9]/ }
           q.messages[:valid?] = "Please enter some text"
         end
           note.contents = !input.empty? ? input : note.contents

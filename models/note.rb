@@ -72,7 +72,7 @@ class Note
     def self.fetch_id
         prompt = TTY::Prompt.new
         prompt.ask("Please enter the ID #") do |q|
-          q.validate { |input| input =~ /\A[+-]?\d+(\.\d+)?\z/ }
+          q.validate { |input| input =~ /^\d+$/ }
           q.messages[:valid?] = "Please enter a valid ID #"
         end
     end
