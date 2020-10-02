@@ -1,6 +1,7 @@
+require 'yaml'
 
 class Note
-    TODOS = []
+    TODOS = YAML.load(File.read('todo.yml')) rescue []
   
     attr_reader :id, :errors, :contents
     attr_accessor :heading
@@ -24,6 +25,7 @@ class Note
       raise 'Note not saved' unless valid?
       @id = rand(100)
       TODOS << self
+      File.open('todo.yml', 'w') { |file| file.write(TODOS.to_yaml) }
     end
 
     def self.help

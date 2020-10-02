@@ -1,3 +1,4 @@
+
 module Views
     module Notes
       def self.show(note:)

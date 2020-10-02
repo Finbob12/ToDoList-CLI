@@ -2,7 +2,6 @@ require_relative 'dispatch'
 require 'tty-prompt'
 require 'colorize'
 
-
 puts '
                    _ _ _ _ _ _ _ _ _ _ _ 
                   (-(-(-(-(-(-(-(-(-(-(-() 
@@ -33,7 +32,7 @@ puts '
                                                                  '.colorize(:magenta)
 begin
     prompt = TTY::Prompt.new
-    input = prompt.select("What would you like to do?", %w(New List Show Update Delete Help Quit.bold), symbols: { marker: "✎" })
+    input = prompt.select("What would you like to do?", %w(New List Show Update Delete Help Quit), symbols: { marker: "✎" })
     selection = input.downcase
     dispatch selection
 end until ['quit', 'q', 'exit', ':q'].include? selection

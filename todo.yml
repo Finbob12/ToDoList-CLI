@@ -1,0 +1,6 @@
+---
+- !ruby/object:Note
+  id: 2
+  heading: one
+  contents: one
+  errors: {}
