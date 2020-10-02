@@ -4,15 +4,15 @@ module Views
         begin
           prompt = TTY::Prompt.new
           input = prompt.ask('Heading: ') do |q|
-            q.validate { |input| input =~ /[a-zA-Z0-9]/ }
-            q.messages[:valid?] = "Please enter some text"
+            q.validate { |input| input =~ /^[a-zA-Z0-9]{1,170}$/ }
+            q.messages[:valid?] = "You have entered nothing, or are over the 170 character limit. Please try again"
           end
           note.heading = !input.empty? ? input : note.heading
   
           prompt = TTY::Prompt.new
           input = prompt.ask('Contents: ') do |q|
-          q.validate { |input| input =~ /[a-zA-Z0-9]/ }
-          q.messages[:valid?] = "Please enter some text"
+          q.validate { |input| input =~ /^[a-zA-Z0-9]{1,170}$/ }
+          q.messages[:valid?] = "You have entered nothing, or are over the 170 character limit. Please try again"
         end
           note.contents = !input.empty? ? input : note.contents
 
