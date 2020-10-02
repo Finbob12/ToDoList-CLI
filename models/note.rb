@@ -74,7 +74,6 @@ class Note
         prompt.ask("Please enter the ID #") do |q|
           q.validate { |input| input =~ /\A[+-]?\d+(\.\d+)?\z/ }
           q.messages[:valid?] = "Please enter a valid ID #"
-
         end
     end
 end
