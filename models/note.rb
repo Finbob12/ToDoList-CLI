@@ -22,7 +22,7 @@ class Note
   
     def save!
       raise 'Note not saved' unless valid?
-      @id = TODOS.length + 1
+      @id = rand(100)
       TODOS << self
     end
 
@@ -49,9 +49,10 @@ class Note
     end
   
     def delete
-      return if @id.nil? #guard for trying to delete nonexistent id
+      return if @id.nil?
       idx = TODOS.index { |todo| todo.id == @id }
       @id = TODOS[idx] = nil
+      TODOS.reject! { |item| item.nil? || item == '' }
     end
   
     def to_s

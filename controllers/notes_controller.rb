@@ -32,7 +32,7 @@ module NotesController
     Note.help
   end
 
-  def self.delete
+  def self.destroy
     requested_id = Note.fetch_id
     note = Note.find(requested_id) rescue nil
     return unless note

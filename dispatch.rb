@@ -13,6 +13,6 @@ def dispatch(selection)
   when 'help'
     ::NotesController.help
   when 'delete'
-    ::NotesController.delete
+    ::NotesController.destroy
   end
 end
