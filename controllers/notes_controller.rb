@@ -35,7 +35,7 @@ module NotesController
   def self.destroy
     requested_id = Note.fetch_id
     note = Note.find(requested_id) rescue nil
-    return puts "Invalid ID # #{requested_id}" unless note
+    return puts "Invalid ID number" unless note
     note.delete
   end
 

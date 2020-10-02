@@ -2,7 +2,7 @@
 module Views
     module Notes
       def self.show(note:)
-        return puts 'Note not found' unless note
+        return puts 'Invalid ID number' unless note
   
         contents = attribute_rows_for note
         table = TTY::Table.new contents
@@ -10,7 +10,7 @@ module Views
         puts
         puts
         puts "If you wish to 'update' or 'delete' this note please use this ID # '#{note.id}'"
-        puts table.render(:unicode, alignments: [:center, :left])
+        puts table.render(:unicode, padding: [0, 1, 0, 1])
       end
   
       def self.attribute_rows_for(note)

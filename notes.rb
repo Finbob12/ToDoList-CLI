@@ -1,6 +1,8 @@
 require_relative 'dispatch'
 require 'tty-prompt'
 require 'colorize'
+require 'artii'
+require 'tty-table'
 
 puts '
                    _ _ _ _ _ _ _ _ _ _ _ 
@@ -21,15 +23,13 @@ puts '
                    |____________________|| 
                    |____________________|| 
                    |____________________|| 
-                   |____________________|/
- _______    _____        _      _     _        _____ _      _____ 
-|__   __|  |  __ \      | |    (_)   | |      / ____| |    |_   _|
-   | | ___ | |  | | ___ | |     _ ___| |_    | |    | |      | |  
-   | |/ _ \| |  | |/ _ \| |    | / __| __|   | |    | |      | |  
-   | | (_) | |__| | (_) | |____| \__ \ |_    | |____| |____ _| |_ 
-   |_|\___/|_____/ \___/|______|_|___/\__|    \_____|______|_____|
+                   |____________________|/'
+
+x = Artii::Base.new
+puts x.asciify("ToDoList CLI").blue
+
                                                                  
-                                                                 '.colorize(:magenta)
+                                                                 
 begin
     prompt = TTY::Prompt.new
     input = prompt.select("What would you like to do?", %w(New List Show Update Delete Help Quit), symbols: { marker: "✎" })

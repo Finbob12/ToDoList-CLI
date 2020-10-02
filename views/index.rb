@@ -1,4 +1,3 @@
-require 'tty-table'
 
 module Views
   module Notes
@@ -6,13 +5,13 @@ module Views
       notes = notes.compact
       return puts 'No notes!' if notes.empty?
 
-      headers = %w[Id Heading Contents]
+      headers = ['ID'.bold, 'Heading'.bold, 'Contents'.bold]
       rows = table_rows_for notes
       table = TTY::Table.new headers, rows
       puts
       puts
       puts 'Below are all currently saved notes. If you wish to update or delete any, please use the ID #'
-      puts table.render :unicode
+      puts table.render :unicode, padding: [0, 1, 0, 1]
     end
 
     def self.table_rows_for(notes)

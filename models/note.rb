@@ -67,7 +67,7 @@ class Note
     def self.find(id)
       id = id.to_i
       todo = TODOS.find { |a| a.id == id }
-      raise "Invalid ID #{id}" unless todo
+      raise "Invalid ID number" unless todo
       todo
     end
 
