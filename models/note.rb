@@ -55,6 +55,7 @@ class Note
       idx = TODOS.index { |todo| todo.id == @id }
       @id = TODOS[idx] = nil
       TODOS.reject! { |item| item.nil? || item == '' }
+      File.open('todo.yml', 'w') { |file| file.write(TODOS.to_yaml) }
     end
   
     def to_s
