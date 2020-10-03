@@ -1,7 +1,7 @@
 
 module Views
   module Notes
-    def self.index(notes:)
+    def self.index(notes:) #creation of tty-table
       notes = notes.compact
       return puts 'No notes!' if notes.empty?
 

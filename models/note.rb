@@ -1,8 +1,8 @@
 require 'yaml'
 
 class Note
-    TODOS = YAML.load(File.read('todo.yml')) rescue []
-  
+    TODOS = YAML.load(File.read('todo.yml')) rescue [] #assign constant to hold the array of notes, this is kept in the yaml file, if the file doesn't exist it will be created.
+#would have rathered this be a class instance variable but the refactoring involved wasn't worth it for an app that it didn't effect.
     attr_reader :id, :errors, :contents
     attr_accessor :heading
   
@@ -21,14 +21,14 @@ class Note
       true
     end
   
-    def save!
+    def save! #id is set to a random number 1..1000. This avoids ID overlap unless extremely unlucky. Need to find a unique ID creation that lets the user type said id without it being long garbage.
       raise 'Note not saved' unless valid?
-      @id = rand(100)
+      @id = rand(1000)
       TODOS << self
-      File.open('todo.yml', 'w') { |file| file.write(TODOS.to_yaml) }
+      File.open('todo.yml', 'w') { |file| file.write(TODOS.to_yaml) } #save will push the new note id into the TODOS array and save it in the yaml
     end
 
-    def self.help
+    def self.help #user menu option if they are confused
       puts
       puts
       puts 'Please use your arrow keys to select what option you would like to do in ToDoList CLI'.colorize(:blue)
@@ -50,7 +50,7 @@ class Note
       puts
     end
   
-    def delete
+    def delete #sets ID to nil and then mutates the array removing any nil values. 
       return if @id.nil?
       idx = TODOS.index { |todo| todo.id == @id }
       @id = TODOS[idx] = nil
@@ -64,14 +64,14 @@ class Note
       TODOS
     end
   
-    def self.find(id)
+    def self.find(id) #iterates through array looking for the argument ID passed in
       id = id.to_i
       todo = TODOS.find { |a| a.id == id }
       raise "Invalid ID number" unless todo
       todo
     end
 
-    def self.fetch_id
+    def self.fetch_id #helper method to ask for additional input after show, update or delete are entering in main menu
         prompt = TTY::Prompt.new
         prompt.ask("Please enter the ID #") do |q|
           q.validate { |input| input =~ /^\d+$/ }

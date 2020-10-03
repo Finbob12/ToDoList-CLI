@@ -1,6 +1,6 @@
 module Views
     module Notes
-      def self.form(note)
+      def self.form(note) #forms a new note. Validation is done here through tty-prompt to check that note isnt empty and isnt so long it breaks tty-table
         begin
           prompt = TTY::Prompt.new
           input = prompt.ask('Heading: ') do |q|

@@ -1,5 +1,5 @@
 
-module Views
+module Views #creation of tty-table when show is called
     module Notes
       def self.show(note:)
         return puts 'Invalid ID number' unless note
