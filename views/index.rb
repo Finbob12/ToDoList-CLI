@@ -5,7 +5,7 @@ module Views
       notes = notes.compact
       return puts 'No notes!' if notes.empty?
 
-      headers = ['ID'.bold, 'Heading'.bold, 'Contents'.bold]
+      headers = ['ID'.bold.blue, 'Heading'.bold.blue, 'Contents'.bold.blue]
       rows = table_rows_for notes
       table = TTY::Table.new headers, rows
       puts

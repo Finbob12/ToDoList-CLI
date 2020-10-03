@@ -3,8 +3,9 @@ require 'tty-prompt'
 require 'colorize'
 require 'artii'
 require 'tty-table'
+require 'rainbow'
 
-puts '
+puts Rainbow('
                    _ _ _ _ _ _ _ _ _ _ _ 
                   (-(-(-(-(-(-(-(-(-(-(-() 
                   /¯ ¯ ¯ ¯ ¯ ¯ ¯ ¯ ¯ ¯ /|| 
@@ -23,7 +24,7 @@ puts '
                    |____________________|| 
                    |____________________|| 
                    |____________________|| 
-                   |____________________|/'
+                   |____________________|/').bright
 
 x = Artii::Base.new
 puts x.asciify("ToDoList CLI").blue

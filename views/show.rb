@@ -15,9 +15,11 @@ module Views
   
       def self.attribute_rows_for(note)
         rows = []
-        rows << ['Id', note.id]
-        rows << ['Heading', note.heading]
-        rows << ['Contents', note.contents]
+        rows << ['Id'.bold.blue, note.id]
+        rows << ['Heading'.bold.blue, note.heading]
+        rows << ['Contents'.bold.blue, note.contents]
       end
     end
-  end
+end
+
+  

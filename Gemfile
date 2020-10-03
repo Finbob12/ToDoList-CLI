@@ -15,3 +15,5 @@ gem "colorize", "~> 0.8.1"
 gem "tty-prompt", "~> 0.22.0"
 
 gem "artii", "~> 2.1"
+
+gem "rainbow", "~> 3.0"
